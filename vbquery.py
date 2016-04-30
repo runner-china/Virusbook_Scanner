@@ -40,8 +40,6 @@ class VirusBook(object):
         print "Report(in JSON):\r\n"
         #print(type(ret_json))
         strlength=len(ret_json)
-        #ret_json=ret_json[1:strlength-1]
-        #print(ret_json)
         mylist = json.loads(ret_json)
         f=open('scans.csv', 'a')
         scan_list=['vbwebshell','Antiy','K7','IKARUS','Baidu','AVG','Avast','ClamAV','Kaspersky','Tencent','GDATA','Dr.Web','Sophos','kaiwei','Avira','Huorong','Kingsoft','Microsoft','ESET','Rising','Qihu360','Panda']
@@ -53,7 +51,6 @@ class VirusBook(object):
                 f.write(',')
             else :
                 f.write('\n')
-                #print i
         f.close()
 
         return 1;
